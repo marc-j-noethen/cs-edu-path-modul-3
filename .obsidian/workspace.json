@@ -1,0 +1,307 @@
+{
+  "main": {
+    "id": "8152f2c3cc3865f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "22c57e56e702c39d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6af03b41ba83d99e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05-Week-11.05-17.05-CES-DevOps-3/02-Advanced-Terraform/2-Excersises/5-Game-of-Active-Directory,-Revisited-Solution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "5-Game-of-Active-Directory,-Revisited-Solution"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6f82ba81ce8c6956",
+    "type": "split",
+    "children": [
+      {
+        "id": "81a5a3047ef88d93",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "edbb8f673aabbb6b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Dateiexplorer"
+            }
+          },
+          {
+            "id": "ae0ce59db1736aa6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "path:\"Week-2-Day-2-Worksheets/\" ",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Suchen"
+            }
+          },
+          {
+            "id": "33e4a4bb459ce109",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Lesezeichen"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 452.0086555480957
+  },
+  "right": {
+    "id": "dfdd3aaf04395c44",
+    "type": "split",
+    "children": [
+      {
+        "id": "e167a7ca21a93c02",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1c66f2dab698a5b4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "00__cybersteps-edu-paths/1__Module-01-Fundamentals/1_Week-16.06-22.06-Python-&-Technical-Fundament/PY-01-Getting-Started-with-Python/2_Excersises/PY_01_The_Answer.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rückverweise auf PY_01_The_Answer"
+            }
+          },
+          {
+            "id": "239218a93b44761b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "00__cybersteps-edu-paths/1__Module-01-Fundamentals/1_Week-16.06-22.06-Python-&-Technical-Fundament/PY-01-Getting-Started-with-Python/2_Excersises/PY_01_The_Answer.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Ausgehende Links von PY_01_The_Answer öffnen"
+            }
+          },
+          {
+            "id": "6ab62b7870ff69c2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "da868544f9416db6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Alle Eigenschaften"
+            }
+          },
+          {
+            "id": "5770a6900e998c1b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "00__cybersteps-edu-paths/1__Module-01-Fundamentals/1_Week-16.06-22.06-Python-&-Technical-Fundament/PY-01-Getting-Started-with-Python/2_Excersises/PY_01_The_Answer.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Gliederung von PY_01_The_Answer"
+            }
+          },
+          {
+            "id": "987e8a9116ca8d1a",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
+            }
+          },
+          {
+            "id": "2270232845e152a5",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
+            }
+          },
+          {
+            "id": "93297ee60bc6b4be",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
+            }
+          },
+          {
+            "id": "50059ece41686ed8",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
+            }
+          },
+          {
+            "id": "672b74a98c8da501",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
+            }
+          },
+          {
+            "id": "c9c4a2528515c770",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
+            }
+          },
+          {
+            "id": "cefa2188b69f27d7",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Anstehende Notizen zur Wiederholung"
+            }
+          }
+        ],
+        "currentTab": 11
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Schnellauswahl öffnen": false,
+      "graph:Graph-Ansicht öffnen": false,
+      "canvas:Neuen Canvas erstellen": false,
+      "daily-notes:Heutige Notiz öffnen": false,
+      "templates:Vorlage einfügen": false,
+      "command-palette:Befehlspalette öffnen": false,
+      "bases:Neue Base erstellen": false,
+      "obsidian-spaced-repetition:Lernkarten wiederholen": false
+    }
+  },
+  "active": "6af03b41ba83d99e",
+  "lastOpenFiles": [
+    "05-Week-11.05-17.05-CES-DevOps-3/02-Advanced-Terraform/2-Excersises/4-No-Tag,-No-Bag-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/02-Advanced-Terraform/2-Excersises/3-Stashed-Away-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/02-Advanced-Terraform/2-Excersises/2-LEGOform-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/02-Advanced-Terraform/2-Excersises/1-Structured-Infrastructure-2-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/02-Advanced-Terraform/1-Concepts-Tools-Terms/Concepts-Tools-Terms.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/01-IaC-&-Terraform-Intro/2-Excersises/5-The Stray Resource-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/01-IaC-&-Terraform-Intro/2-Excersises/4-Shield-Wall-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/01-IaC-&-Terraform-Intro/2-Excersises/3-Storage-Wars-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/01-IaC-&-Terraform-Intro/2-Excersises/2-Tokyo-Drift-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/01-IaC-&-Terraform-Intro/2-Excersises/1-Structured-Infrastructure-Solution.md",
+    "05-Week-11.05-17.05-CES-DevOps-3/01-IaC-&-Terraform-Intro/1-Concepts-Tools-Terms/Concepts-Tools-Terms.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/05-Not-Just-GitHub/1-Concepts-Tools-Terms/Concepts-Tools-Terms.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/04-Software-Supply-Chain-Security/2-Excersises/3-Chain-of-Trust-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/04-Software-Supply-Chain-Security/2-Excersises/2-Rotten-Apples-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/04-Software-Supply-Chain-Security/2-Excersises/1-Digital-Recipe-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/04-Software-Supply-Chain-Security/1-Concepts-Tools-Terms/Concepts-Tools-Terms.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/03-Image-Security-&-Azure-Registry/2-Excersises/4-Red-Light-Green-Light-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/03-Image-Security-&-Azure-Registry/2-Excersises/3-The-Gatekeeper-Setup-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/03-Image-Security-&-Azure-Registry/2-Excersises/2-Building-&-Testing-the-Vault-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/03-Image-Security-&-Azure-Registry/2-Excersises/1-The-Local-Detective-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/03-Image-Security-&-Azure-Registry/1-Concepts-Tools-Terms/Concepts-Tools-Terms.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/02-Docker-Compose/2-Excersises/4-The-Pandora-Variable-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/02-Docker-Compose/2-Excersises/3-The-Health-Inspector-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/02-Docker-Compose/2-Excersises/2-Leaking-Container-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/02-Docker-Compose/2-Excersises/1-Putting-On-The-Gloves-Solution.md",
+    "04-Week-04.05-10.05-CES-DevOps-2/02-Docker-Compose/1-Concepts-Tools-Terms/Concepts-Tools-Terms.md",
+    "00-Ressources/Carrersteps_My-Ressources/marc-noethen-soc-analyst.pdf",
+    "00-Ressources/Carrersteps_My-Ressources/marc-noethen-devsecops.pdf",
+    "00-Ressources/Carrersteps_My-Ressources/Marathon_Aufgaben_und_Projekte_Checkliste.pdf",
+    "00-Ressources/Carrersteps_My-Ressources/Kombinierte_Karriere_Roadmap_DevSecOps.pdf",
+    "00-Ressources/Carrersteps_My-Ressources/Arbeitszeugnis-Marc-Noethen.pdf",
+    "00-Ressources/Carrersteps_My-Ressources/Arbeitszeugnis-Marc-Noethen.docx",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/02-Advanced-Terraform/0_PC-Dokument/images/image.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/02-Advanced-Terraform/0_PC-Dokument/images/image 4.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/02-Advanced-Terraform/0_PC-Dokument/images/image 3.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/02-Advanced-Terraform/0_PC-Dokument/images/image 2.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/02-Advanced-Terraform/0_PC-Dokument/images/image 1.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/01-IaC-&-Terraform-Intro/0_PC-Dokument/images/image.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/01-IaC-&-Terraform-Intro/0_PC-Dokument/images/image 4.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/01-IaC-&-Terraform-Intro/0_PC-Dokument/images/image 3.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/01-IaC-&-Terraform-Intro/0_PC-Dokument/images/image 2.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/01-IaC-&-Terraform-Intro/0_PC-Dokument/images/image 1.png",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/03-/2_Excersises/Solutions",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/03-/1_Zusammenfassung-Tools-Begriffe/images",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/03-/0_PC-Dokument/images",
+    "03-cybersteps-edu-path-Modul-3/05-Week-11.05-17.05-CES-DevOps-3-todo/02-Advanced-Terraform/2_Excersises/Solutions"
+  ]
+}
