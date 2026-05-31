@@ -17,36 +17,70 @@
 
 ## Solution
 
-### Custom enumeration script
+### PowerShell enumeration script
 
-```python
-import requests
+```powershell
+$RG = "rg-blob-hunter"
+$LOCATION = "germanywestcentral"
+$STORAGE = "lukascorpfiles2026"
 
-account = "<storageaccountname>"
-containers = ["public", "uploads", "backups", "files", "documents"]
+az group create `
+  --name $RG `
+  --location $LOCATION
 
-for container in containers:
-    url = f"https://{account}.blob.core.windows.net/{container}?restype=container&comp=list"
-    response = requests.get(url, timeout=5)
+az storage account create `
+  --name $STORAGE `
+  --resource-group $RG `
+  --location $LOCATION `
+  --sku Standard_LRS `
+  --kind StorageV2
 
-    if response.status_code == 200:
-        print(f"[+] Public container found: {container}")
-        print(response.text)
-    else:
-        print(f"[-] No match: {container} ({response.status_code})")
+$KEY = az storage account keys list --resource-group $RG --account-name $STORAGE --query "[0].value" --output tsv
+$CONTAINER = "public"
+
+az storage container create `
+  --name $CONTAINER `
+  --account-name $STORAGE `
+  --account-key $KEY `
+  --public-access container
+
+Set-Content -Path ".\internal-memo.txt" -Value "Internal memo - confidential"
+
+az storage blob upload `
+  --account-name $STORAGE `
+  --account-key $KEY `
+  --container-name $CONTAINER `
+  --name "internal-memo.txt" `
+  --file ".\internal-memo.txt"
+
+@"
+public
+uploads
+backups
+"@ | Set-Content .\container-names.txt
+
+$blobName = "internal-memo.txt"
+Get-Content .\container-names.txt | ForEach-Object {
+    $testUrl = "https://$STORAGE.blob.core.windows.net/$_/$blobName"
+    try {
+        $response = Invoke-WebRequest -Uri $testUrl -Method Head -ErrorAction Stop
+        Write-Host "[FOUND] $testUrl Status=$($response.StatusCode)"
+    } catch {
+        Write-Host "[MISS]  $testUrl"
+    }
+}
+
+az group delete `
+  --name $RG `
+  --yes `
+  --no-wait
 ```
 
 ### Output
 
 ```text
-[-] No match: public (404)
-[+] Public container found: backups
-<?xml version="1.0" encoding="utf-8"?>
-<EnumerationResults>
-  ...
-  <Name>internal-memo.txt</Name>
-  ...
-</EnumerationResults>
+[MISS]  https://lukascorpfiles2026.blob.core.windows.net/public/internal-memo.txt
+[FOUND] https://lukascorpfiles2026.blob.core.windows.net/backups/internal-memo.txt Status=200
 ```
 
 ---
@@ -58,7 +92,7 @@ for container in containers:
 | Create a guessable storage account and container | Simulate a realistic misconfiguration | Name and container are easily discoverable using word lists | ✅ |
 | Set public container to `Container` | Enable anonymous enumeration | Blob list can be queried without authentication | ✅ |
 | Run script with word list | Test common container names | The correct container name is detected | ✅ |
-| Evaluate XML response | Make blob names visible | `internal-memo.txt` appears in the result | ✅ |
+| Evaluate HTTP response | Make blob names visible | `internal-memo.txt` appears in the result | ✅ |
 | Delete storage account | Clean up insecure test configuration | The intentionally exposed resource has been removed | ✅ |
 
 ---
@@ -68,4 +102,3 @@ for container in containers:
 - **Blob Hunting:** Attackers combine guessable names with public storage endpoints to find misconfigured containers.
 - **Enumeration:** Even simple word lists are often sufficient to discover insecure default names.
 - **Warning ⚠️:** A public container with an easily guessable name is a classic source of data leakage risk.
-
