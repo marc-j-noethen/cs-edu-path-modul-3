@@ -20,21 +20,22 @@
 
 ### Git commands
 
-```bash
-cd security-project
+```powershell
+cd .\security-project
 
-cat > config.env <<'EOF'
+@'
 DB_HOST=localhost
 DB_USER=admin
 DB_PASSWORD=SuperSecret123!
 API_KEY=sk-1234567890abcdef
-EOF
+'@ | Set-Content -LiteralPath .\config.env
 
 git add config.env
 git commit -m "Add config"
 
-rm config.env
-git commit -am "Remove secrets"
+Remove-Item -LiteralPath .\config.env
+git add -A
+git commit -m "Remove secrets"
 
 git show HEAD~1:config.env
 
@@ -49,6 +50,7 @@ git log --oneline
 | Step/Command | Purpose | Expected result | ✓ |
 |---|---|---|---|
 | `git show HEAD~1:config.env` | Verify the problem | The deleted secrets are still readable from the older revision. | ✅ |
+| `Remove-Item` and `git add -A` | Stage the deletion correctly | Git records the file removal as a separate commit. | ✅ |
 | `git reset --hard HEAD~2` | Clean up unpushed history | Both problematic commits disappear completely from the local history. | ✅ |
 | `git log --oneline` again | Validate cleanup | The two secret-related commits no longer appear. | ✅ |
 
@@ -59,4 +61,3 @@ git log --oneline
 - **Secrets:** A file-deletion commit does not remove a secret from the history.
 - **`git reset --hard`:** This solution is only suitable for local commits that have not yet been pushed.
 - **Production practice:** For commits that have already been published, rotation and history-rewrite tools such as `git filter-repo` would also be required.
-

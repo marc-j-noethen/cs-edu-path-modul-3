@@ -20,20 +20,17 @@
 
 ### Git commands
 
-```bash
-cd security-project
+```powershell
+cd .\security-project
 
 git switch -c feature-auth
-cat > auth.py <<'EOF'
-def authenticate(user, password):
-    return False
-EOF
+Set-Content -LiteralPath .\auth.py -Value 'print("auth placeholder")'
 
 git add auth.py
-git commit -m "Add auth stub"
+git commit -m "Add auth placeholder"
 
 git switch main
-git merge --no-ff feature-auth -m "Merge feature-auth"
+git merge --no-ff feature-auth -m "Merge feature-auth into main"
 
 git log --oneline --graph --decorate --all
 ```
@@ -45,7 +42,8 @@ git log --oneline --graph --decorate --all
 | Step/Command | Purpose | Expected result | ✓ |
 |---|---|---|---|
 | `git switch -c feature-auth` | Isolate feature work | The change is created separately from the main branch. | ✅ |
-| Commit to `feature-auth` | Document a standalone work step | The branch contains only the Auth stub as the change. | ✅ |
+| `Set-Content` for `auth.py` | Create the placeholder file | `auth.py` contains a simple placeholder line for the exercise. | ✅ |
+| `git add auth.py` + commit | Document a standalone work step | The branch contains only the Auth placeholder as the change. | ✅ |
 | `git merge --no-ff feature-auth` | Make the merge explicitly visible | A merge commit documents the integration. | ✅ |
 | `git log --graph --decorate --all` | Check branch structure | The history clearly shows the branch, merge and branch pointers. | ✅ |
 
@@ -56,5 +54,4 @@ git log --oneline --graph --decorate --all
 - **Branch:** Branches separate parallel work without immediately altering the main branch.
 - **`--no-ff`:** This ensures the merge remains visible as a separate event.
 - **Auth stub:** Placeholder code is sufficient here, as the focus is on the Git workflow rather than implementation logic.
-
 

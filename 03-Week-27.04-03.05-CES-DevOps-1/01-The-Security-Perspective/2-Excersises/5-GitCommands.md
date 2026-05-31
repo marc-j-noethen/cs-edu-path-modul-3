@@ -20,17 +20,14 @@
 
 ### Command sequence
 
-```bash
-cd security-project
+```powershell
+cd .\security-project
 git branch
 git branch -M main
 git switch -c feature-auth
-cat > auth.py <<'EOF'
-def authenticate(user, password):
-    return False
-EOF
+Set-Content -LiteralPath .\auth.py -Value 'print("auth placeholder")'
 git add auth.py
-git commit -m "Add auth stub"
+git commit -m "Add auth feature"
 git switch main
 git merge --no-ff feature-auth -m "Merge feature-auth"
 git log --oneline --graph --decorate --all
@@ -42,8 +39,10 @@ git log --oneline --graph --decorate --all
 
 | Step/Command | Purpose | Expected result | ✓ |
 |---|---|---|---|
+| `git branch` | Check available branches | You can confirm where `main` and `feature-auth` sit before merging. | ✅ |
 | `git branch -M main` | Standardise branch names | The main branch has the expected name `main`. | ✅ |
 | `git switch -c feature-auth` | Create a feature branch | New changes are isolated in the feature branch. | ✅ |
+| `Set-Content` for `auth.py` | Create the placeholder file | The feature branch contains a simple placeholder implementation. | ✅ |
 | `git merge --no-ff feature-auth` | Document feature integration | The merge is visible in the history and has not been fast-forwarded. | ✅ |
 | `git log --graph --decorate --all` | Final check | The branch topology is clear as a graph. | ✅ |
 
@@ -51,6 +50,6 @@ git log --oneline --graph --decorate --all
 
 ## Notes
 
-- **Command reference:** This file is not a summary of theory, but the appropriate sequence of commands for the exercise.
+- **Command reference:** This file is a compact PowerShell-friendly reference for the branching exercise.
 - **`git branch`:** Helps to check the active branch and existing branches before and after the merge.
 - **History graph:** Especially in learning exercises, the graphical view is often the quickest way to check plausibility.

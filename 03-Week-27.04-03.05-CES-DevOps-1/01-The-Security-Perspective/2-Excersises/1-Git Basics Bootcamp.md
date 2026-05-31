@@ -20,24 +20,23 @@
 
 ### Git commands
 
-```bash
+```powershell
 mkdir security-project
 cd security-project
-
 git init
 git branch -M main
 
-cat > README.md <<'EOF'
-# Sentinel Scanner
-A lightweight demo security scanner for training purposes.
-EOF
+Set-Content -LiteralPath .\README.md -Value '# Security Project'
+Add-Content -LiteralPath .\README.md -Value 'A fictional tool for scanning suspicious files.'
 
 git add README.md
-git commit -m "Add project README"
+git commit -m "Add README for fictional security tool"
 
-touch config.yaml scanner.py
+Set-Content -LiteralPath .\config.yaml -Value 'scan_mode: demo'
+Set-Content -LiteralPath .\scanner.py -Value 'print("scanner placeholder")'
+
 git add config.yaml scanner.py
-git commit -m "Add scanner skeleton and config"
+git commit -m "Add config and scanner placeholders"
 
 git log --oneline
 ```
@@ -49,8 +48,10 @@ git log --oneline
 | Step/Command | Purpose | Expected result | ✓ |
 |---|---|---|---|
 | `git init` and `git branch -M main` | Initialise repository cleanly | The new project is versioned and the main branch is called `main`. | ✅ |
-| `git add README.md` + first commit | Document project basics | The README appears as the first commit in the history. | ✅ |
-| `touch config.yaml scanner.py` + second commit | Check in additional files collectively | Both files are included together in the second commit. | ✅ |
+| `Set-Content` for `README.md` | Document project basics | The README contains the project title and short description. | ✅ |
+| `git add README.md` + first commit | Record the first milestone | The README appears as the first commit in the history. | ✅ |
+| `Set-Content` for `config.yaml` and `scanner.py` | Create both placeholders | Both files are ready for the second commit. | ✅ |
+| `git add config.yaml scanner.py` + second commit | Check in additional files collectively | Both files are included together in the second commit. | ✅ |
 | `git log --oneline` | Generate commit history | The history shows exactly two commits in short form. | ✅ |
 
 ---
@@ -60,4 +61,3 @@ git log --oneline
 - **Git:** Git stores changes as a traceable history of commits.
 - **Staging Area:** With `git add`, you specify exactly what goes into the next commit.
 - **`git log --oneline`:** The short view is ideal as quick proof of the commit.
-
